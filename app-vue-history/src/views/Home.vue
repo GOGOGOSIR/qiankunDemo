@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <router-link to="/app-vue-hash/about">hash about</router-link>
+    <div @click="goAbout">hash about</div>
 
     <router-link to="/Agent/MyHouse">MyHouse</router-link>
   </div>
@@ -15,6 +15,11 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  methods: {
+    goAbout () {
+      this.$root.parentRouter.push('/app-vue-hash/about')
+    }
   }
 }
 </script>

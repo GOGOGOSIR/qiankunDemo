@@ -11,7 +11,8 @@ Vue.config.productionTip = false;
 let router = null;
 let instance = null;
 
-function render ({ container } = {}) {
+function render ({ container, data } = {}) {
+  console.log(data, '====data====')
   router = new VueRouter({
     base: '/',
     mode: 'history',
@@ -22,6 +23,11 @@ function render ({ container } = {}) {
     instance = new Vue({
       router,
       store,
+      data () {
+        return {
+          parentRouter: data.router,
+        }
+      },
       render: h => h(App),
     }).$mount('#appVueHistory');
   } else {
@@ -32,6 +38,11 @@ function render ({ container } = {}) {
 
     instance = new Vue({
       router,
+      data () {
+        return {
+          parentRouter: data.router,
+        }
+      },
       render: () => cachedInstance._vnode // 从最初的 Vue 实例上获得 _vnode
     })
 
