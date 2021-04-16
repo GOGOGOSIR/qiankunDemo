@@ -10,7 +10,7 @@
     "core-js": "^3.6.4",
     "custom-event-polyfill": "^1.0.7",
     "fetch-polyfill": "^0.8.2",
-    "qiankun": "^2.3.6",
+    "qiankun": "^2.4.0",
     "serve": "^11.3.2",
     "vuex": "^3.1.2",
     "whatwg-fetch": "^3.2.0"

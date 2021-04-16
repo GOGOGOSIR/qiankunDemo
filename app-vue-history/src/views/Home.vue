@@ -1,25 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <div @click="goAbout">hash about</div>
-
-    <router-link to="/Agent/MyHouse">MyHouse</router-link>
+    <h1>This is app-vue-history home page</h1>
+    <router-link to="/app-vue-hash/about">hash about</router-link>
+    <div @click="goToPage('/app-vue-hash/about')">
+      通过主应用的router跳转至hash about
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  },
   methods: {
-    goAbout () {
-      this.$root.parentRouter.push('/app-vue-hash/about')
+    goToPage (path) {
+      console.log(this.$root.parentRouter);
+      this.$root.parentRouter.push(path);
     }
-  }
+  },
 }
 </script>

@@ -8,6 +8,7 @@
         >主项目的数据：{{ commonData.parent }}，点击变回1</span
       >
     </header>
+    <h1>vue 和 vue-router 在主应用通过cdn引入，子应用共享</h1>
     <div id="appContainer1"></div>
     <router-view></router-view>
   </div>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/app-vue-history/home">Home</router-link> |
-      <router-link to="/app-vue-history/about">About</router-link>
+      <router-link to="/app-vue-history/home">history Home</router-link> |
+      <router-link to="/app-vue-history/about">history About</router-link>
     </div>
     <router-view />
   </div>
